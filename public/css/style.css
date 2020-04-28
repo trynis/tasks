@@ -1,0 +1,56 @@
+html, body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: #222;
+    color: #ddd;
+}
+
+main {
+    border: solid 1px orange;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding-bottom: 10px;
+    border-bottom: solid 1px #666;
+    margin-bottom: 15px;
+}
+
+li.done span {
+    text-decoration: line-through;
+}
+
+li a.checkbox {
+    font-size: 130%;
+}
+
+li a.delete {
+    font-size: 80%;
+    float: right;
+}
+
+form #task > div {
+    display: inline;
+}
+
+form label {
+    margin-right: 10px;
+}
+
+form button {
+    margin-left: 10px;
+}

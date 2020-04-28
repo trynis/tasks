@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Tasks{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="/css/style.css">
+    </head>
+    <body>
+        {% for message in app.flashes('error') %}
+            <div class="message error">{{ message }}</div>
+        {% endfor %}
+        <main>
+        {% block body %}{% endblock %}
+        </main>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    {% if tasks %}
+    <ul>
+    {% for task in tasks %}
+        <li class="{{ task.done ? 'done' : 'not_done' }}">
+            <a class="checkbox" href="{{ url('status', {id : task.id}) }}">{{ task.done ? '&#9632;' : '&#9633;' }}</a>
+            <span>{{ task.content }}</span>
+            <a class="delete" href="{{ url('delete', {id : task.id}) }}">&#10005;</a><br>
+        </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+
+    {{ form(form) }}
+
+{% endblock %}
